@@ -30,15 +30,24 @@ public:
     char text[textSize];
     unsigned long numberConverted_dword;
     unsigned char numberConverted_byte;
+    *Data = 0;
     if (GetWindowTextA(hwnd, text, textSize) != 0)
     {
         numberConverted_dword = _atoi_l(text, 0);
-        if (numberConverted_dword > 255)numberConverted_dword = 255;
+        if (numberConverted_dword < 0) {
+            numberConverted_dword = 0;
 
         _itoa_s(numberConverted_dword, text, 10);
-        SetWindowTextA(hwnd, text);
+            SetWindowTextA(hwnd, text);
+        }
+        if (numberConverted_dword > 255) {
+        _itoa_s(numberConverted_dword, text, 10);
+            SetWindowTextA(hwnd, text);
+            numberConverted_dword = 255;
+        }
 
-        numberConverted_byte = (char)numberConverted_dword;
+
+        numberConverted_byte = (char)(numberConverted_dword);
         *Data = numberConverted_byte;
     }
 }

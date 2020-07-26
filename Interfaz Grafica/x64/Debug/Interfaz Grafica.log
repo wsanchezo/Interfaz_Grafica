@@ -1,0 +1,15 @@
+﻿  Interfaz Grafica.cpp
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\WinSockServer3.h(614,6): warning C4101: 'ErrorReturned': variable local sin referencia
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\WinSockServer3.h(1820,12): warning C4018: '>=': no coinciden signed/unsigned
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\WinSockServer3.h(1874,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(117,18): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(124,61): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(167,19): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(191,22): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(414,31): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(437,31): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(477,30): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(484,27): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(517,27): warning C4244: 'inicializando': conversión de 'LRESULT' a 'int'; posible pérdida de datos
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\Interfaz Grafica.cpp(230,10): warning C4101: 'IPstring_connectedTo': variable local sin referencia
+  Interfaz Grafica.vcxproj -> C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\x64\Debug\Interfaz Grafica.exe

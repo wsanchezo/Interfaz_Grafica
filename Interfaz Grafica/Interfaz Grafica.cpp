@@ -6,6 +6,8 @@
 #include "WindowsMessages.h"
 #include "strsafe.h"
 #include "PaintLEDS.h"
+#include "Led.h"
+#include "SwitchButton.h"
 
 #define WM_APP_WIFI_CONNECTED WM_APP
 #define ID_TIMER1 1001
@@ -23,12 +25,38 @@ WinSockServer3  WSS;
 UserInterface   UI;
 int portNumber = WinSockServer3::portNumber_default;
 int             isConected = 0;
+const int       LedTop = 200,LedLeft=500;
 
+RECT            rectPicture3 = { LedLeft,LedTop,LedLeft+200,LedTop+200 };
+const int       LedArrayLen = 4;
+Led             LedArray[LedArrayLen];
+const int       SwitchArrayLen = 4;
+SwitchButton    SwitchArray[SwitchArrayLen];
 
 // Declaraciones de funciones adelantadas incluidas en este módulo de código:
 INT_PTR CALLBACK WndProc(HWND , UINT , WPARAM , LPARAM );
 static WinSockServer3::WlanNotificationCallback_prv_Data CallBackData = { 0 };
+void iniLedArrays(int left,int top,int margin,int diameter) {
+    for (int i = 0; i < LedArrayLen; i++)
+    {
+        LedArray[i].on = true;
+        LedArray[i].SetDimensions(diameter, diameter);
+        LedArray[i].SetPos(left+(i*(diameter+margin)), top);
+    }
+    LedArray[0].color = RGB(0, 0, 255);
+    LedArray[1].color = RGB(255, 255, 0);
+    LedArray[2].color = RGB(255, 0, 0);
+    LedArray[3].color = RGB(0, 255, 0);
+}
 
+void iniSwitchArrays(int left, int top, int margin, int width,int height) {
+    for (int i = 0; i < LedArrayLen; i++)
+    {
+        SwitchArray[i].on = true;
+        SwitchArray[i].SetDimensions(width, height);
+        SwitchArray[i].SetPos(left + (i * (width + margin)), top);
+    }
+}
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
                      _In_ LPWSTR    lpCmdLine,
@@ -48,7 +76,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     WSS.EnumerarWifis(GetDlgItem(hwndMain, IDC_COMBO_ADAPTER), GetDlgItem(hwndMain, IDC_COMBO_WIFI),GetDlgItem(hwndMain, IDC_LIST_ADAPTER),GetDlgItem(hwndMain,IDC_LIST_WIFI2));
 
     ShowWindow(hwndMain, SW_SHOW);
-
+    iniLedArrays(LedLeft, LedTop, 10, 20);
+    iniSwitchArrays(LedLeft, LedTop+40, 10, 20,50);
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_INTERFAZGRAFICA));
 
     MSG msg;
@@ -250,9 +279,9 @@ INT_PTR CALLBACK WndProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
             }
             WSS.testForEvents();
             //GetWindowRect(GetDlgItem(hDlg, IDC_PICTURE), &rectPicture);
-            InvalidateRect(hDlg, &rectPicture2, TRUE);
+            InvalidateRect(hDlg, &rectPicture3, TRUE);
             //UpdateWindow(hDlg);
-            RedrawWindow(hDlg, &rectPicture, NULL, RDW_NOCHILDREN| RDW_INVALIDATE);
+            RedrawWindow(hDlg, &rectPicture3, NULL, RDW_NOCHILDREN| RDW_INVALIDATE);
             //UpdateWindow(hDlg);
 
             /*HWND hwndPic = GetDlgItem(hDlg, IDC_PICTURE);
@@ -556,7 +585,15 @@ INT_PTR CALLBACK WndProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
         HWND hwndPicture = GetDlgItem(hDlg, IDC_PICTURE);
         HDC hdc = BeginPaint(hDlg, &ps);
         //HDC hdc = BeginPaint(hwndPicture, &ps);
-        PaintButtons(hdc, led, Switch, 200, 500);
+        //PaintButtons(hdc, led, Switch, 200, 500);
+        for (int i = 0; i < LedArrayLen; i++) {
+            LedArray[i].on = (led & (1 << i)) != 0;
+            LedArray[i].Paint(hdc);
+        }
+        for (int i = 0; i < SwitchArrayLen; i++) {
+            SwitchArray[i].on = (Switch & (1 << i)) != 0;
+            SwitchArray[i].Paint(hdc);
+        }
         EndPaint(hwndPicture, &ps);
         //EndPaint(hDlg, &ps);
         //Return value:If an application processes this message, it should return zero.

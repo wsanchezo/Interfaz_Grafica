@@ -139,13 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Test\Test Custom Control 2 GDI Elecronica\Test Custom Control 2 GDI Elecronica\SwitchButton.h" />
     <ClInclude Include="Debug_old.h" />
+    <ClInclude Include="Electro.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Header.h" />
     <ClInclude Include="Interfaz Grafica.h" />
+    <ClInclude Include="Led.h" />
     <ClInclude Include="PaintLEDS.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SharedClass.h" />
+    <ClInclude Include="SwitchButton.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="WindowsMessages.h" />

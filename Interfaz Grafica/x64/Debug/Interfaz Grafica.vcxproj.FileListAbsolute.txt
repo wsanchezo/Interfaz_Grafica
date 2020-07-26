@@ -1,0 +1,2 @@
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\x64\Debug\Interfaz Grafica.exe
+C:\Programacion\C++\Aprendizaje\Interfaz_Grafica-master\Interfaz_Grafica-master\Interfaz Grafica\x64\Debug\Interfaz Grafica.pdb
