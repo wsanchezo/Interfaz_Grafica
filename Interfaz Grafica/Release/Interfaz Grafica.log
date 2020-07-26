@@ -1,0 +1,8 @@
+﻿  Interfaz Grafica.cpp
+E:\PROGRAMACION\C++\Aprendizaje\Interfaz grafica\Interfaz Grafica\WinSockServer3.h(614,6): warning C4101: 'ErrorReturned': variable local sin referencia
+E:\PROGRAMACION\C++\Aprendizaje\Interfaz grafica\Interfaz Grafica\WinSockServer3.h(1820,12): warning C4018: '>=': no coinciden signed/unsigned
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 241 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Interfaz Grafica.vcxproj -> E:\PROGRAMACION\C++\Aprendizaje\Interfaz grafica\Interfaz Grafica\Release\Interfaz Grafica.exe

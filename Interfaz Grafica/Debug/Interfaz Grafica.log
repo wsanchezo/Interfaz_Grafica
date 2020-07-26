@@ -1,0 +1,5 @@
+﻿  Interfaz Grafica.cpp
+E:\PROGRAMACION\C++\Aprendizaje\Interfaz grafica\Interfaz Grafica\WinSockServer3.h(614,6): warning C4101: 'ErrorReturned': variable local sin referencia
+E:\PROGRAMACION\C++\Aprendizaje\Interfaz grafica\Interfaz Grafica\WinSockServer3.h(1820,12): warning C4018: '>=': no coinciden signed/unsigned
+E:\PROGRAMACION\C++\Aprendizaje\Interfaz grafica\Interfaz Grafica\Interfaz Grafica.cpp(201,10): warning C4101: 'IPstring_connectedTo': variable local sin referencia
+  Interfaz Grafica.vcxproj -> E:\PROGRAMACION\C++\Aprendizaje\Interfaz grafica\Interfaz Grafica\Debug\Interfaz Grafica.exe
