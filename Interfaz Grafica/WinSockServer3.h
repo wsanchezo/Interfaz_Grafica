@@ -30,7 +30,7 @@ public: static const int SEND_PHOTO_MAIN_DEFAULT_STRING_SIZE = 256;
 public: static const int MAX_IP_ADRESSES = 10;
 public: static const int MAX_IP_STRING_LENGHT = 25;
 protected: wchar_t ServiceName[SEND_PHOTO_MAIN_DEFAULT_STRING_SIZE]= { 0 };
-protected: wchar_t ComputerName[MAX_COMPUTERNAME_LENGTH + 1] = { 0 };	//Obnener el nombre de la computadora
+protected: wchar_t ComputerName[MAX_COMPUTERNAME_LENGTH + 1] = { 0 }; // obtener nombre la computadora
 protected: wchar_t IP[MAX_IP_ADRESSES][SEND_PHOTO_MAIN_DEFAULT_STRING_SIZE];
 protected: wchar_t PORT[MAX_IP_ADRESSES][SEND_PHOTO_MAIN_DEFAULT_STRING_SIZE];
 
